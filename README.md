@@ -43,7 +43,7 @@ The analysis covers the three core WHO malnutrition indicators:
 
 ## 🗃️ Data Description
 
-**Source:** Kenya Demographic and Health Survey (KDHS) — publicly available via [DHS Program](https://dhsprogram.com/)
+**Source:** Kenya Demographic and Health Survey (KDHS)
 
 The dataset includes the following key variables:
 
