@@ -36,7 +36,7 @@ The analysis covers the three core WHO malnutrition indicators:
 ---
 ## 🔄 Analytical Workflow
 
-![KDHS Child Nutrition Analysis Workflow](workflow.png)
+![KDHS Child Nutrition Analysis Workflow](kdhs.JPG)
 
 > The pipeline moves from raw KDHS survey data through cleaning and standardization in Stata, survey-weighted prevalence estimation, stratified subgroup analysis, and finally to policy-ready dashboards and evidence-based recommendations.
 ---
@@ -75,10 +75,10 @@ The dataset includes the following key variables:
 
 | Region | Stunting Prevalence |
 |--------|-------------------|
-| **Kilifi** | 36.7% ⚠️ |
-| **West Pokot** | 33.8% ⚠️ |
-| **Samburu** | 30.3% ⚠️ |
-| **Meru** | 25.9% ⚠️ |
+| **Kilifi** | 36.7% |
+| **West Pokot** | 33.8% |
+| **Samburu** | 30.3% |
+| **Meru** | 25.9% |
 
 ---
 
@@ -86,9 +86,9 @@ The dataset includes the following key variables:
 
 | Region | Wasting Prevalence |
 |--------|--------------------|
-| **Wajir** | 22.7% ⚠️ |
-| **Turkana** | 22.1% ⚠️ |
-| **Marsabit** | 20.5% ⚠️ |
+| **Wajir** | 22.7% |
+| **Turkana** | 22.1% |
+| **Marsabit** | 20.5% |
 
 > Wajir, Turkana, and Marsabit reflect the acute food insecurity and recurrent droughts in ASAL (Arid and Semi-Arid Lands) regions.
 
@@ -133,8 +133,7 @@ Key findings from the multivariate logistic regression (odds ratios, survey-weig
 
 ---
 
-## 🛠️ Technical Skills Demonstrated
-
+## 🛠️ Technical Skills 
 ### **Statistical Analysis**
 - ✅ Complex survey design handling (stratification, clustering, sampling weights)
 - ✅ Multivariate logistic regression with odds ratio interpretation
@@ -155,93 +154,10 @@ Key findings from the multivariate logistic regression (odds ratios, survey-weig
 
 ---
 
-## 📁 Project Structure
-
-```
-kenya-child-nutrition-analysis/
-│
-├── data/
-│   ├── raw/                          # Original KDHS microdata (not included - DHS restrictions)
-│   ├── processed/                    # Cleaned, analysis-ready datasets
-│   └── data_dictionary.md            # Variable definitions and coding
-│
-├── code/
-│   ├── 01_data_cleaning.do           # Stata: Data preprocessing and recoding
-│   ├── 02_descriptive_analysis.do    # Stata: Survey-weighted descriptives
-│   ├── 03_regression_models.do       # Stata: Multivariate logistic regression
-│   └── 04_export_for_viz.do          # Stata: Prepare data for Power BI
-│
-├── visualizations/
-│   ├── power_bi_dashboard.pbix       # Interactive Power BI report
-│   ├── regional_stunting_map.png     # Geographic hotspot visualization
-│   ├── age_prevalence_curves.png     # Age-stratified analysis
-│   └── education_gradient.png        # Maternal education threshold effect
-│
-├── reports/
-│   ├── technical_report.pdf          # Full statistical analysis with methods
-│   ├── executive_summary.pdf         # 2-page policy brief for decision-makers
-│   └── methodology.md                # Detailed documentation of analytical approach
-│
-├── outputs/
-│   ├── regression_tables.xlsx        # Formatted regression output
-│   ├── descriptive_statistics.xlsx   # Survey-weighted prevalence estimates
-│   └── policy_recommendations.docx   # Evidence-based intervention framework
-│
-├── README.md                          # This file
-├── LICENSE                            # MIT License
-└── requirements.txt                   # Software dependencies
-```
-
----
-
-## 🔍 Methodology
-
-### Data Source
-**Kenya Demographic and Health Survey (KDHS) 2022**
-- Sample: 17,280 children aged 0-59 months
-- Coverage: All 47 counties of Kenya
-- Design: Stratified two-stage cluster sampling
-- Response rate: 96.4%
-
-### Analytical Approach
-
-#### 1️⃣ **Data Preparation**
-```stata
-* Survey design specification
-svyset [pweight=weight], psu(cluster_id) strata(strata_id)
-
-* Anthropometric indicator calculation
-gen stunted = (haz < -2)  // Height-for-age Z-score < -2 SD
-gen wasted = (whz < -2)   // Weight-for-height Z-score < -2 SD
-gen underweight = (waz < -2)  // Weight-for-age Z-score < -2 SD
-```
-
-#### 2️⃣ **Descriptive Analysis**
-- Survey-weighted prevalence estimates by region, age, gender, education, wealth
-- 95% confidence intervals accounting for complex sampling design
-- Bivariate associations with chi-square tests
-
-#### 3️⃣ **Multivariate Regression**
-```stata
-svy: logit stunted i.gender c.age_in_months i.mother_edu i.wealth_index i.Region, or
-```
-
-**Model specification:**
-- Outcome: Stunted (binary)
-- Predictors: Gender, age (continuous), maternal education, wealth quintile, region
-- Results: Adjusted odds ratios with 95% CI, p-values
-- Model fit: F-statistic = 11.64, p < 0.001
-
-#### 4️⃣ **Visualization**
-- Power BI for interactive dashboards
-- Color-coded risk stratification (red = critical, orange = high, yellow = moderate)
-- Drill-through capabilities for detailed regional analysis
-
----
 
 ## 📈 Key Visualizations
 
-### 1. Regional Stunting Hotspot Map
+### 1. Regional Stunting Hotspot 
 ![Regional Distribution](Stunted_prevalence.JPG)
 
 **Insight:** Kilifi (36.7%), West Pokot (33.8%), and Samburu (30.3%) require emergency intervention
@@ -304,16 +220,6 @@ Budget Distribution by Regional Risk Tier:
 ### **Cost-Effectiveness**
 - Targeted approach: **$45 per child protected** (3-4x better than universal programming)
 - ROI: **$16 returned for every $1 invested** (through reduced healthcare costs, improved productivity)
-
----
-
-
-
-
-### Model Diagnostics
-✅ Multicollinearity check (VIF < 3 for all predictors)  
-✅ Goodness of fit (Archer-Lemeshow test: p = 0.42, acceptable)  
-✅ Influential observations screened (none with excessive leverage)  
 
 ---
 
