@@ -199,64 +199,8 @@ Budget Distribution by Regional Risk Tier:
 
 ---
 
-## 🚀 How to Reproduce This Analysis
 
-### Prerequisites
-```bash
-# Software requirements
-- Stata 17+ (survey statistics capabilities)
-- Power BI Desktop
-- R or Python (optional, for additional visualizations)
-```
 
-### Step-by-Step Guide
-
-1️⃣ **Access KDHS Data**
-```
-Visit: https://dhsprogram.com/data/available-datasets.cfm
-Request: Kenya Standard DHS 2022
-Approval: ~48 hours
-```
-
-2️⃣ **Run Analysis**
-```bash
-# Clone repository
-git clone https://github.com/yourusername/kenya-child-nutrition-analysis.git
-
-# Run Stata scripts in order
-stata-mp do code/01_data_cleaning.do
-stata-mp do code/02_descriptive_analysis.do
-stata-mp do code/03_regression_models.do
-
-# Open Power BI dashboard
-open visualizations/power_bi_dashboard.pbix
-```
-
-3️⃣ **Generate Reports**
-```bash
-# Compile LaTeX technical report (if using)
-pdflatex reports/technical_report.tex
-
-# Or use provided Word templates
-open reports/executive_summary_template.docx
-```
-
----
-
-## 📚 Technical Documentation
-
-### Survey Weighting Approach
-All analyses account for complex survey design:
-- **Sampling weights** adjust for unequal selection probabilities
-- **Stratification** improves precision of estimates
-- **Clustering** corrects standard errors for intra-cluster correlation
-
-**Why this matters:** Unweighted analysis would produce biased estimates and invalid p-values.
-
-### Missing Data Handling
-- Anthropometric measurements: 3.2% missing → excluded from analysis
-- Socioeconomic variables: <1% missing → complete case analysis
-- Sensitivity analysis confirmed minimal bias from exclusions
 
 ### Model Diagnostics
 ✅ Multicollinearity check (VIF < 3 for all predictors)  
@@ -265,37 +209,12 @@ All analyses account for complex survey design:
 
 ---
 
-## 🎓 Skills Highlighted for Recruiters
-
-### **Hard Skills**
-- [x] Survey statistics and complex sampling methods
-- [x] Logistic regression and causal inference
-- [x] Power BI dashboard development
-- [x] Stata programming (data manipulation, modeling, visualization)
-- [x] Statistical interpretation and communication
-- [x] Geospatial analysis
-
-### **Soft Skills**
-- [x] Translating technical findings for non-technical stakeholders
-- [x] Policy-oriented analytical thinking
-- [x] Project documentation and reproducibility
-- [x] Data storytelling and visualization design
-- [x] Cross-functional communication (technical, executive, operational audiences)
-
-### **Domain Knowledge**
-- [x] Public health and nutrition epidemiology
-- [x] Development economics and poverty analysis
-- [x] Survey methodology and sampling theory
-- [x] Evidence-based policy design
-
----
-
 ## 📬 Contact & Collaboration
 
-**Author:** [Your Name]  
-**Email:** your.email@example.com  
-**LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)  
-**Portfolio:** [yourportfolio.com](https://yourportfolio.com)
+**Author:** [Phanice Osoro]  
+**Email:** phanice01.ke@gmail.com  
+**LinkedIn:** [linkedin.com/in/yourprofile](https://www.linkedin.com/in/phanice-analyst/))  
+
 
 ### Let's Connect!
 I'm interested in roles involving:
@@ -306,36 +225,8 @@ I'm interested in roles involving:
 
 ---
 
-## 📄 License
 
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
 
-**Note on Data:** KDHS microdata is restricted. Users must obtain independent permission from the DHS Program to replicate this analysis.
-
----
-
-## 🙏 Acknowledgments
-
-- **DHS Program** for providing high-quality survey data
-- **Kenya National Bureau of Statistics** for data collection
-- **UNICEF Kenya** for nutritional status guidelines
-- **WHO** for anthropometric standards
-
----
-
-## 🔗 Related Projects
-
-- [Malaria Prevalence Analysis - Tanzania](link-to-repo)
-- [COVID-19 Vaccination Coverage Dashboard](link-to-repo)
-- [Water Access and Health Outcomes - Uganda](link-to-repo)
-
----
-
-## 📌 Project Status
-
-**Status:** ✅ Complete and available for review  
-**Last Updated:** February 2026  
-**Version:** 1.0
 
 **Interested in this work?** ⭐ Star this repository and let's discuss how data-driven insights can transform public health outcomes!
 
