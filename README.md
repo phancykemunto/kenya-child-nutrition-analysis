@@ -9,7 +9,7 @@
 
 > **Transforming survey data into actionable nutrition policy recommendations using advanced statistical methods and interactive visualizations**
 
-![Project Banner](https://via.placeholder.com/1200x300/0F4C81/FFFFFF?text=Kenya+Child+Nutrition+Analysis)
+
 
 ## 📊 Project Overview
 
@@ -134,7 +134,7 @@ svy: logit stunted i.gender c.age_in_months i.mother_edu i.wealth_index i.Region
 ## 📈 Key Visualizations
 
 ### 1. Regional Stunting Hotspot Map
-![Regional Distribution](visualizations/regional_stunting_map.png)
+![Regional Distribution](Stunted prevalence.jpg)
 
 **Insight:** Kilifi (36.7%), West Pokot (33.8%), and Samburu (30.3%) require emergency intervention
 
