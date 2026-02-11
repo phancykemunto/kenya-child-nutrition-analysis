@@ -141,23 +141,17 @@ svy: logit stunted i.gender c.age_in_months i.mother_edu i.wealth_index i.Region
 ---
 
 ### 2. Age-Specific Vulnerability Patterns
-![Age Patterns](visualizations/age_prevalence_curves.png)
+![Age Patterns](Age.JPG)
 
 **Insight:** Critical intervention window: 12-47 months (peak malnutrition burden)
 
 ---
 
 ### 3. Maternal Education Threshold Effect
-![Education Gradient](visualizations/education_gradient.png)
+![Education Gradient](Education.JPG)
 
 **Insight:** Only higher education provides protection; primary/secondary have no effect
 
----
-
-### 4. Wealth Gradient Analysis
-![Wealth Impact](visualizations/wealth_gradient.png)
-
-**Insight:** Clear dose-response relationship; poverty is the dominant driver
 
 ---
 
