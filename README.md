@@ -15,6 +15,30 @@
 
 This project analyzes **17,280 children** from the Kenya Demographic and Health Survey (KDHS) to identify critical drivers of child malnutrition and provide evidence-based policy recommendations. By combining **survey-weighted logistic regression**, **geographic analysis**, and **interactive visualizations**, the analysis reveals actionable insights for resource allocation and intervention design.
 
+The analysis covers the three core WHO malnutrition indicators:
+
+| Indicator | Definition | Reflects |
+|-----------|-----------|----------|
+| **Stunting** | Height-for-Age Z-score (HAZ) < −2 | Chronic malnutrition |
+| **Wasting** | Weight-for-Height Z-score (WHZ) < −2 | Acute malnutrition |
+| **Underweight** | Weight-for-Age Z-score (WAZ) < −2 | Combined chronic & acute |
+
+---
+## 🎯 Objectives
+
+- Clean and standardize real-world DHS survey data using WHO protocols
+- Generate nationally representative malnutrition prevalence estimates using survey-weighted analysis
+- Identify geographic, demographic, and socioeconomic drivers of child malnutrition
+- Produce interactive Power BI dashboards for policy and programmatic decision-making
+- Quantify determinants of stunting through multivariate logistic regression
+- Translate analytical findings into targeted, evidence-based recommendations for program planners and policymakers
+
+## 🔄 Analytical Workflow
+
+![KDHS Child Nutrition Analysis Workflow](workflow.png)
+
+> The pipeline moves from raw KDHS survey data through cleaning and standardization in Stata, survey-weighted prevalence estimation, stratified subgroup analysis, and finally to policy-ready dashboards and evidence-based recommendations.
+
 ### 🎯 Key Findings
 
 - **Geographic Disparities**: 2.5-fold variation in stunting (14.6% to 36.7%) across regions
